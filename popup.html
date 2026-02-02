@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 220px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      margin: 0;
+    }
+    h3 {
+      margin: 0 0 12px 0;
+      font-size: 16px;
+      color: #fff;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .btn:active {
+      transform: translateY(0);
+    }
+    #toggleBtn {
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+    }
+    #toggleBtn.active {
+      background: #f44336;
+    }
+    #skipOnceBtn {
+      background: #2196F3;
+      color: white;
+    }
+    .status {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+    .shortcuts {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #333;
+      font-size: 11px;
+      color: #666;
+    }
+    .shortcuts div {
+      margin: 4px 0;
+    }
+    kbd {
+      background: #333;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h3>Storyline Skipper</h3>
+
+  <button id="toggleBtn" class="btn">Start Auto-Skip</button>
+  <button id="skipOnceBtn" class="btn">Skip Once</button>
+
+  <div class="status" id="status">Ready</div>
+
+  <div class="shortcuts">
+    <div><kbd>Alt+S</kbd> Toggle auto-skip</div>
+    <div><kbd>Alt+N</kbd> Skip once</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
